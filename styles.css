@@ -1,0 +1,323 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* متغيرات الألوان */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --accent-color: #e74c3c;
+    --text-color: #34495e;
+    --background-color: #ffffff;
+}
+
+/* الخطوط */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+/* شريط التنقل */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+}
+
+/* أيقونة الهامبرغر */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* قسم العرض الرئيسي */
+.hero {
+    height: 100vh;
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px; /* لتعويض شريط التنقل */
+}
+
+.hero-content {
+    background: rgba(44, 62, 80, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    color: var(--secondary-color);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 25px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* أقسام الموقع */
+section {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: right;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 62, 80, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay .btn {
+    background-color: var(--accent-color);
+}
+
+.testimonials {
+    background-color: var(--secondary-color);
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* نموذج الاتصال */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group input:read-only {
+    background-color: #f0f0f0;
+}
+
+.contact .btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+}
+
+.contact .btn:hover {
+    background-color: #1a252f;
+}
+
+/* التذييل */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* الاستجابة للهواتف المحمولة */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        width: 200px;
+        display: none;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .portfolio-container,
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
