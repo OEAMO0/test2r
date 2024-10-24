@@ -300,6 +300,11 @@ section h2 {
     min-height: 24px; /* لضمان مكان ثابت للرسالة */
 }
 
+/* تنسيقات الأيقونات داخل زر الإرسال */
+.contact .btn i {
+    margin-left: 10px;
+}
+
 
 /* التذييل */
 footer {
